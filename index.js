@@ -5,6 +5,7 @@ import App from './App';
 import { name as appName } from './app.json';
 import { createStackNavigator, CardStackStyleInterpolator } from "react-navigation";
 import MapExpanded from "./MapExpanded";
+import MarkerClustering from './MarkerClustering';
 
 const Navigator = createStackNavigator({
     Home: {
@@ -12,6 +13,9 @@ const Navigator = createStackNavigator({
     },
     MapExpanded: {
         screen: MapExpanded
+    },
+    MarkerClustering: {
+        screen: MarkerClustering
     }
 },
     {

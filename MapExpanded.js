@@ -80,7 +80,6 @@ const styles = StyleSheet.create({
     paddingHorizontal: 12,
     alignItems: 'center',
     marginHorizontal: 10,
-    zIndex: -700
   },
   buttonContainer: {
     flexDirection: 'row',

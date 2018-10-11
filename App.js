@@ -5,6 +5,7 @@ import {
   Text,
   Dimensions,
   TouchableOpacity,
+  Button,
 } from 'react-native';
 
 import MapView, { Marker, ProviderPropType } from 'react-native-maps';
@@ -70,7 +71,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <View style={styles.container}>
+      <View >
         <View style={{ height: 300 }}>
           <MapView
             onPress={ (event) => {
@@ -93,7 +94,10 @@ class App extends React.Component {
             />)}
           </MapView>
         </View>
+       <View style={styles.buttonContainer}>
+       <Button title={`Show Map`} onPress={()=> this.props.navigation.navigate('MarkerClustering')}/>
       </View>
+       </View>
     );
   }
 }
@@ -119,15 +123,13 @@ const styles = StyleSheet.create({
     alignItems: 'stretch',
   },
   button: {
-    width: 80,
-    paddingHorizontal: 12,
-    alignItems: 'center',
-    marginHorizontal: 10,
+
+    alignItems: 'flex-start',
   },
   buttonContainer: {
-    flexDirection: 'row',
+    width: width/3,
+    flexDirection: 'column',
     marginVertical: 20,
-    backgroundColor: 'transparent',
   },
 });
 
